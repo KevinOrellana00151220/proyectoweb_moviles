@@ -24,7 +24,7 @@ function TodoForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='todo-form'>
+    <form onSubmit={handleSubmit} className="items-center">
       {props.edit ? (
         <>
           <input
@@ -35,23 +35,26 @@ function TodoForm(props) {
             ref={inputRef}
             className='todo-input edit'
           />
-          <button onClick={handleSubmit} className='todo-button edit'>
+          <button onClick={handleSubmit} className=" bg-white order-solid border-2 border-black ">
             Update
           </button>
         </>
       ) : (
         <>
-          <input
+        <div className="grid justify-center">
+        <input
             placeholder='Add a todo'
             value={input}
             onChange={handleChange}
             name='text'
-            className='todo-input'
+            className="border-2 border-black ... my-10 "
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className='todo-button'>
+          <button onClick={handleSubmit} className=" bg-white order-solid border-2 border-black ">
             Add todo
           </button>
+        </div>
+
         </>
       )}
     </form>

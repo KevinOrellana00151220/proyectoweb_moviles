@@ -42,14 +42,20 @@ function TodoList() {
 
   return (
     <>
-      <h1>What's the Plan for Today?</h1>
+    <div className=" grid justify-items-center">
+    <div className=" grid justify-items-center" >
+        <div className="bg-white order-solid border-2 h-min w-min border-purple-400 mt-6 text-center text-3xl font-extrabold text-gray-900">Agenda Personal</div>
+      </div>
+      <div className="space-y-6 bg-sky-300 order-solid border-2 h-min w-min border-blue-400 grid justify-items-center">
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
-      />
+        />
+      </div>
+    </div>
     </>
   );
 }

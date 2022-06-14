@@ -27,15 +27,15 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>
-      <div className='icons'>
+      <div className="grid justify-items-center space-y-6">
         <button 
           onClick={() => removeTodo(todo.id)}
-          className='delete-icon'
+          className= "bg-white order-solid border-2 border-black rounded-md shadow-sm -space-y-px"
           >Borrar
         </button>
         <button 
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
-          className='edit-icon'
+          className=" bg-white order-solid border-2 border-black rounded-md shadow-sm -space-y-px"
         >Editar
         </button>
           
